@@ -11,9 +11,11 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - export PYTHONPATH=$PYTHONPATH:$(pwd)
   - export FLASK_APP=run.py
   - export FLASK_CONFIG=testing
+  - flask db init
+  - flask db migrate
+  - flask db upgrade
 
 script:
   - nose2
