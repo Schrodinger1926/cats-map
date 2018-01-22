@@ -75,41 +75,37 @@ class TestModels(TestBase):
 		_adr = loc.address
 		self.assertTrue(len(_adr) < 50)
 
-
 class TestViews(TestBase):
 	"""docstring for TestViews"""
-
 	def test_home_page_get(self):
 		"""
-		Test if home page is accessible by get
+		Test if home page is accessibel with get
 		"""
-		response = self.client.get(url_for('maps.homepage'))
-        
-		code = response.status_code
-        self.assertEqual(code, 200)
+		response = self.client.get(url_for('maps_main.homepage'))
+		self.assertEqual(response.status_code, 200)
 
-    def test_home_page_post(self):
+	def test_home_page_post(self):
 		"""
-		Test if home page is accessible by post
+		Test if home page is accessibel with post
 		"""
-		response = self.client.post(url_for('maps.homepage'))
-        self.assertEqual(response.status_code, 200)
 
-    def test_fetch_page(self):
-    	"""
-		Test if fetch page is accessible
-    	"""
-    	response = self.client.get(url_for('maps.fetch'))
-        self.assertEqual(response.status_code, 200)
-
-    def test_clear_page(self):
-
-    	"""
-    	Test if clear page is accessible
-    	"""
-    	response = self.client.get(url_for('maps.clear'))
-        self.assertEqual(response.status_code, 200)
+		response = self.client.post(url_for('maps_main.homepage'))
+		self.assertEqual(response.status_code, 200)		
 	
+	def test_fetch_page(self):
+		"""
+		Test if fetch page is accessibel or not
+		"""
+		response = self.client.get(url_for('maps_main.fetch'))
+		self.assertEqual(response.status_code, 200)			
+
+	def test_clear_page(self):
+		"""
+		Test if clear page is accessibel or not
+		"""
+		response = self.client.get(url_for('maps_main.clear'))
+		self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
 	unittest.main()
