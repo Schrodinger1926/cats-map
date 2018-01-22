@@ -45,66 +45,70 @@ class TestModels(TestBase):
 		"""
 		self.assertEqual(Location.query.count(), 1)
 
-# 	def test_lat_type(self):
-# 		"""
-# 		Test lat type
-# 		"""
-# 		loc = db.session.query().first()
-# 		self.assertEqual(type(loc.lat), float)
+	def test_lat_type(self):
+		"""
+		Test lat type
+		"""
+		loc = Location.query.first()
+		self.assertEqual(type(loc.lat), float)
 
-# 	def test_lng_type(self):
-# 		"""
-# 		Test lat type
-# 		"""
-# 		loc = db.session.query().first()
-# 		self.assertEqual(type(loc.lng), float)
+	def test_lng_type(self):
+		"""
+		Test lat type
+		"""
+		loc = Location.query.first()
+		self.assertEqual(type(loc.lng), float)
 
-# 	def test_address_type(self):
-# 		"""
-# 		Test lat type
-# 		"""
-# 		loc = db.session.query().first()
-# 		self.assertEqual(type(loc.address), str)
+	# def test_address_type(self):
+	# 	"""
+	# 	Test lat type
+	# 	"""
+	# 	loc = Location.query.first()
+	# 	self.assertEqual(type(loc.address), str)
 
-# 	def test_address_length_sanity(self):
-# 		"""
-# 		check if max lenght is smaller than threshold
-# 		"""
-# 		loc = db.session.query().first()
-# 		self.assertL
+	def test_address_length_sanity(self):
+		"""
+		check if max lenght is smaller than threshold
+		"""
+		threshold = 500
+		loc = Location.query.first()
+		_adr = loc.address
+		self.assertTrue(len(_adr) < 50)
 
 
-# class TestViews(TestBase):
-# 	"""docstring for TestViews"""
+class TestViews(TestBase):
+	"""docstring for TestViews"""
 
-# 	def test_home_page_get(self):
-# 		"""
-# 		Test if home page is accessible by get
-# 		"""
-# 		response = self.client.get(url_for('maps.homepage'))
-#         self.assertEqual(response.status_code, 200)
+	def test_home_page_get(self):
+		"""
+		Test if home page is accessible by get
+		"""
+		response = self.client.get(url_for('maps.homepage'))
+        
+		code = response.status_code
+        self.assertEqual(code, 200)
 
-#     def test_home_page_post(self):
-# 		"""
-# 		Test if home page is accessible by post
-# 		"""
-# 		response = self.client.post(url_for('maps.homepage'))
-#         self.assertEqual(response.status_code, 200)
+    def test_home_page_post(self):
+		"""
+		Test if home page is accessible by post
+		"""
+		response = self.client.post(url_for('maps.homepage'))
+        self.assertEqual(response.status_code, 200)
 
-#     def test_fetch_page(self):
-#     	"""
-# 		Test if fetch page is accessible
-#     	"""
-#     	response = self.client.get(url_for('maps.fetch'))
-#         self.assertEqual(response.status_code, 200)
+    def test_fetch_page(self):
+    	"""
+		Test if fetch page is accessible
+    	"""
+    	response = self.client.get(url_for('maps.fetch'))
+        self.assertEqual(response.status_code, 200)
 
-#     def test_clear_page(self):
+    def test_clear_page(self):
 
-#     	"""
-#     	Test if clear page is accessible
-#     	"""
-#     	response = self.client.get(url_for('maps.clear'))
-#         self.assertEqual(response.status_code, 200)
+    	"""
+    	Test if clear page is accessible
+    	"""
+    	response = self.client.get(url_for('maps.clear'))
+        self.assertEqual(response.status_code, 200)
 	
 
 if __name__ == '__main__':
