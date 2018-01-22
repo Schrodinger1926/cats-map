@@ -14,9 +14,7 @@ class TestBase(TestCase):
 		# test configuration 
 		config_name = 'testing'
 		app = create_app(config_name)
-		app.config.update(
-            SQLALCHEMY_DATABASE_URI='sqlite:///:memory:'
-        )
+		
 		return app
 
 	def setUP(self):

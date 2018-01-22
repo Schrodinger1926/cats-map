@@ -28,7 +28,7 @@ class TestingConfig(Config):
     Testing configurations
     """
     TESTING = True
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/sidharth/Documents/nbt/final/app/maps/database/locations_test.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/sidharth/Documents/nbt/final/app/maps/database/locations_test.db'
 
 
 app_config = {
