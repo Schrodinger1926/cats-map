@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1' >
+</head>
+
+<link rel="stylesheet" type="text/css" href="static/main.css">
+
+<body>
+
+  <div id="map"></div>
+  
+  <h3>Firebase address list</h3>
+
+  <table id="firebaseList"></table>
+  
+  <button onclick="resetData();">Reset Data</button>
+
+  <button onclick="window.location = 'https://github.com/Schrodinger1926/nbt'">Documentation</button>
+
+  <!-- import firebase javascript library   -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+
+  <!-- Intializing firebase -->
+  <script type="text/javascript" src="static/config.js"></script>
+
+
+  <!-- Import jquery library -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous">
+  
+  </script>
+  <!-- Jinja src path syntax  -->
+  <script type="text/javascript" src="static/main.js"></script>
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQsvzQaOV7lEbZLVgLkTonW8Mxf1xWFkM&callback=myMap"></script>
+
+</body>
+
+
+</html>

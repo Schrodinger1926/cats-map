@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1' >
+</head>
+
+<link rel="stylesheet" type="text/css" href="static/main.css">
+
+<body>
+	<h3>SQLite address list</h3>
+	<table>
+		<tr>  
+			<th> SERIAL </th>
+			<th> LATITUTDE </th>
+			<th> LONGITUDE </th>
+			<th> ADDRESS </th>
+
+		</tr>
+
+
+		{% for row in rows %}
+			<tr>
+				<td> {{loop.index}} </td>
+				<td> {{row.lat}} </td>
+				<td> {{row.lng}} </td>
+				<td> {{row.address}} </td>
+			</tr>
+		{% endfor %}
+
+	</table>
+		
+</body>
+</html>
