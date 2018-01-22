@@ -3,7 +3,7 @@
 
 # Welcome to revamped Schrodinger's Map
 
-![Alt text](/assets/map.png?raw=true)
+![Alt text](/assets/maps.png?raw=true)
 
 
 ## How to setup
@@ -33,12 +33,52 @@ $ export FLASK_APP=run.py
 $ export FLASK_CONFIG=development
 ```
 
+
 #### Run test cases
 
 `$ nose2`
 
-#### Launch on test server
-`$ flask run`
+
+#### Launch on test server (If you want to start with fresh sqlite)
+```
+$ flask db init
+$ flask db migrate
+$ flask db upgrade
+
+```
+
+<!-- #### HEROKU CLI DEPLOYMENT
+
+In progres -->
+
+
+### FRONT END
+
+
+#### config.js
+```
+var config = {
+    apiKey: "...",
+    authDomain: "...",
+    databaseURL: "...",
+    projectId: "...",
+    storageBucket: "...",
+    messagingSenderId: "..."
+  };
+  firebase.initializeApp(config);   // establish connection
+
+// 
+//  Your firbase realtime database configuration
+//  
+//  Go to firabse console to get credentials
+```
+
+
+
+
+
+
+
 
 
 
