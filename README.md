@@ -249,21 +249,21 @@ function resetData(){
 
 A simple three data attribute model
 
-* model.id
+* Location.id
 
-   Returns a unique (integer) id assigned to model object during session transaction
+    Returns a unique (integer) id assigned to model object during session transaction
 
-* model.lat
+* Location.lat
 
-   Returns (float) latitude of the Location instance geocoordinate 
+    Returns (float) latitude of the Location instance geocoordinate 
 
-* model.lng
+* Location.lng
 
-   Return (float) longitude of the Location instance geocoordinate
+    Return (float) longitude of the Location instance geocoordinate
 
-* model.address
+* Location.address
 
-   Returns (string) precise address of the Location instance geocoordinate
+    Returns (string) precise address of the Location instance geocoordinate
 
 
 
