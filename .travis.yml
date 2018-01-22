@@ -16,7 +16,7 @@ before_script:
   - export FLASK_CONFIG=testing
 
 script:
-  - 
+  - nose2
 
 after_success:
   - coveralls

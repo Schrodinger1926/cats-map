@@ -45,12 +45,12 @@ class TestModels(TestBase):
 		"""
 		self.assertEqual(Location.query.count(), 1)
 
-	# def test_lat_type(self):
-	# 	"""
-	# 	Test lat type
-	# 	"""
-	# 	loc = db.session.query.first()
-	# 	self.assertEqual(type(loc.lat), float)
+# 	def test_lat_type(self):
+# 		"""
+# 		Test lat type
+# 		"""
+# 		loc = db.session.query().first()
+# 		self.assertEqual(type(loc.lat), float)
 
 # 	def test_lng_type(self):
 # 		"""
