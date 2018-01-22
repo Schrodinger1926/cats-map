@@ -26,7 +26,7 @@ class ProductionConfig(Config):
     """
     Production configurations
     """
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(ABSOLUTE_PATH, 'locations.db')
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
     DEBUG = False
 
