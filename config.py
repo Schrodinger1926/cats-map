@@ -1,3 +1,9 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+ABSOLUTE_PATH = os.path.join(BASE_DIR, 'app/maps/database/')
+
 
 class Config(object):
     """
@@ -5,13 +11,14 @@ class Config(object):
     """
 
     DEBUG = True
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DevelopmentConfig(Config):
     """
     Development configurations
     """
 
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/sidharth/Documents/nbt/final/app/maps/database/locations_dev.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(ABSOLUTE_PATH, 'locations_dev.db')
     SQLALCHEMY_ECHO = True
 
 
@@ -19,7 +26,8 @@ class ProductionConfig(Config):
     """
     Production configurations
     """
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/sidharth/Documents/nbt/final/app/maps/database/locations.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(ABSOLUTE_PATH, 'locations.db')
+
     DEBUG = False
 
 
@@ -27,8 +35,10 @@ class TestingConfig(Config):
     """
     Testing configurations
     """
+    
     TESTING = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:////Users/sidharth/Documents/nbt/final/app/maps/database/locations_test.db'
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(ABSOLUTE_PATH, 'locations_test.db')
+
 
 
 app_config = {
