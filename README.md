@@ -223,6 +223,26 @@ model.address
 
 
 
+#### VIEWS
+
+`/`
+	
+	GET:
+		returns `index.html`, the home page of application
+
+	POST
+		Stores incomming data to sqlite storage. Expects geoocordinate as JSON.
+
+
+`/fetch`
+	GET:
+		returns a table of sqlite database.
+
+`/clear`
+	 GET:
+	 	clears all the backend sqlite data
+
+
 
 
 
