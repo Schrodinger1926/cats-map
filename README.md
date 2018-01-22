@@ -73,6 +73,52 @@ var config = {
 //  Go to firabse console to get credentials
 ```
 
+Looks somewhat like this, JSON data storage
+![Alt text](/assets/firabase_database.png?raw=true)
+
+
+#### main.js
+```
+var ref = firebase.database().ref('...');
+
+// gets reference to the node
+
+
+function myMap(){
+	...
+
+	var mapOptions = {
+
+		...
+
+		// sets maps fields like center, zoom, mapTypeID
+	}
+
+	map = new google.maps.Map( dumpelement , mapOptions);
+
+	var geocoder = new google.maps.Geocoder();
+
+	// for reverse geocoding, 
+	// returns address content 
+
+	google.maps.event.addListener(map, 'click', function(event) {
+
+		...
+
+		// On click listener
+
+		
+	}
+
+
+}
+
+// Callback function to google maps api
+
+
+
+```
+
 
 
 
