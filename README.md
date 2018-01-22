@@ -1,8 +1,10 @@
 [![Build Status](https://travis-ci.org/Schrodinger1926/cats-map.svg?branch=master)](https://travis-ci.org/Schrodinger1926/cats-map) ![Heroku](https://heroku-badge.herokuapp.com/?app=cats-map)
 
-NOTE: Don't worry about failing build
-	  Some issue with local db connection at travis. Looking into that!
+NOTE: Don't worry about failing build\n
+	  Some issue with local db connection at travis. Looking into that!\n
 	  Local tests are passing.
+
+ 
 
 
 # Welcome to revamped Schrodinger's Map
@@ -117,7 +119,7 @@ Looks somewhat like this, JSON data storage
 
 PART-1: VALIDATE AND PUSH ADDRESS TO DATABASES
 
-```
+```javascript
 var ref = firebase.database().ref('...');
 
 // gets reference to the node
@@ -183,13 +185,13 @@ function myMap(){
 
 
 }
-
 ```
 
 
 PART-2: RETERIVE DATA
 
-```
+
+```javascript
 // Arguments: ..
 // Returns: Entire firebase database,  Type: array of JSON objects
 ref.on(.. , func{
@@ -207,6 +209,7 @@ ref.on(.. , func{
 
 
 PART-3: HELPING FUNCTION
+
 
 ```
 // Arguments: None
@@ -247,16 +250,16 @@ function resetData(){
 A simple three data attribute model
 
 model.id
-	Returns a unique (integer) id assigned to model object during session transaction
+    Returns a unique (integer) id assigned to model object during session transaction
 
 model.lat
-	Returns (float) latitude of the Location instance geocoordinate 
+    Returns (float) latitude of the Location instance geocoordinate 
 
 model.lng
-	Return (float) longitude of the Location instance geocoordinate
+    Return (float) longitude of the Location instance geocoordinate
 
 model.address
-	Returns (string) precise address of the Location instance geocoordinate
+    Returns (string) precise address of the Location instance geocoordinate
 
 
 
@@ -264,29 +267,31 @@ model.address
 
 `/`
 	
-	GET:
-		returns `index.html`, the home page of application
+    GET:
+        returns `index.html`, the home page of application
+
 
 	POST
 		Stores incomming data to sqlite storage. Expects geoocordinate as JSON.
 
 
 `/fetch`
+
 	GET:
 		returns a table of sqlite database.
 
 `/clear`
+	 
 	 GET:
 	 	clears all the backend sqlite data
 
 
 ## FOOTNOTES
 
-Spent a hell lot time with concepts, bugs and architecture.
-From almost no experience in javascript, maps, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
+* Spent a hell lot time with concepts, bugs and architecture.
+* From almost no experience in javascript, maps, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
+* I struggled a lot witht the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
 
-I struggled a lot witht the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
+* Won't say a J learning curve, it wasn't an exponential in the later stage. It was a vertical.
 
-Won't say a J learning curve, it wasn't an exponential in the later stage. It was a vertical.
-
-I feel front test were also to be done. Will try!
+* I feel front test were also to be done. Will try!
