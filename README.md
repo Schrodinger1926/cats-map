@@ -52,7 +52,7 @@ $ flask db upgrade
 In progres -->
 
 
-### FRONT END
+## FRONT END
 
 
 #### config.js
@@ -200,6 +200,33 @@ function resetData(){
 
 }
 ```
+
+
+## BACK END
+
+
+#### MODEL
+
+A simple three data attribute model
+
+model.id
+	Returns a unique (integer) id assigned to model object during session transaction
+
+model.lat
+	Returns (float) latitude of the Location instance geocoordinate 
+
+model.lng
+	Return (float) longitude of the Location instance geocoordinate
+
+model.address
+	Returns (string) precise address of the Location instance geocoordinate
+
+
+
+
+
+
+
 
 
 
