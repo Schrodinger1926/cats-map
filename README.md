@@ -270,9 +270,9 @@ A simple three data attribute model
 #### VIEWS
 
 `/`
-	
-    GET:
-        returns `index.html`, the home page of application
+
+   GET:
+   returns `index.html`, the home page of application
 
 
 	POST
