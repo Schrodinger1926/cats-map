@@ -282,6 +282,11 @@ model.address
 
 ## FOOTNOTES
 
-Spent a hell lot time with concepts, bugs and architecture. 
+Spent a hell lot time with concepts, bugs and architecture.
+From almost no experience in javascript, maps, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
 
+I struggled a lot witht the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
 
+Won't say a J learning curve, it wasn't an exponential in the later stage. It was a vertical.
+
+I feel front test were also to be done. Will try!
