@@ -1,14 +1,46 @@
 [![Build Status](https://travis-ci.org/Schrodinger1926/cats-map.svg?branch=master)](https://travis-ci.org/Schrodinger1926/cats-map)
 
+NOTE: Don't worry about failing build
+	  Some issue with local db connection at travis. Looking into that!
+	  Local tests are passing.
+
 
 # Welcome to revamped Schrodinger's Map
+
+## Overview
+
+Randomly click any location on google map,
+
+click on a real address location and you will be rewarded with an amazing marker. else an alert will be 
+
+issued. If bored you can reset all the data and start again.
+
+
+## Functionality in a nutshell
+
+1. (MAP TRIGGER) Map click will generate geocoordinate
+
+2. (MAP LISTENER) A maps listener will reverse geocode and validate data
+
+3. (PUSH)The valid address you clicked will be pushed to firebase realtime database and a sqlite3 database on flask backend.
+4. (DELETE) Reset will clear data on both the databases separately 
+
+5. (DECOUPLED) Firebase and sqlite are NOT synced (Tried that!, wouldn't that be cool?)
+
+6. (FIREBASE LISTENER) Any data pushed into firebase will trigger firebase listener, receives wholedataset and lay markers accordingly.
+
+
+
+
+
+
 
 ![Alt text](/assets/maps.png?raw=true)
 
 
 ## How to setup
 
-### DEVELOPMENT ENVIORNMENT
+### LOCAL DEVELOPMENT ENVIORNMENT
 
 Ensure you are on Python 2.7.10
 
@@ -47,10 +79,14 @@ $ flask db upgrade
 
 ```
 
-<!-- #### HEROKU CLI DEPLOYMENT
+#### HEROKU CLI DEPLOYMENT
 
-In progres -->
+In progress.
+NOTE: Need higher version of xcode to install Heroku CLI, heavy downloading ongoing!.
 
+
+
+# Documentation
 
 ## FRONT END
 
@@ -74,7 +110,7 @@ var config = {
 ```
 
 Looks somewhat like this, JSON data storage
-![Alt text](/assets/firabase_database.png?raw=true)
+![Alt text](/assets/firebase_database.png?raw=true)
 
 
 #### main.js
@@ -204,6 +240,7 @@ function resetData(){
 
 ## BACK END
 
+![Alt text](/assets/backend.png?raw=true)
 
 #### MODEL
 
@@ -243,14 +280,8 @@ model.address
 	 	clears all the backend sqlite data
 
 
+## FOOTNOTES
 
-
-
-
-
-
-
-
-
+Spent a hell lot time with concepts, bugs and architecture. 
 
 
