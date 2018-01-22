@@ -94,7 +94,7 @@ NOTE: Need higher version of xcode to install Heroku CLI, heavy downloading ongo
 
 
 #### config.js
-```
+```javascript
 var config = {
     apiKey: "...",
     authDomain: "...",
@@ -211,7 +211,7 @@ ref.on(.. , func{
 PART-3: HELPING FUNCTION
 
 
-```
+```javascript
 // Arguments: None
 // Returns: None
 function clearMarker(){
@@ -269,25 +269,25 @@ A simple three data attribute model
 
 #### VIEWS
 
-`/`
+* /
 
-   GET:
+   method : GET
    returns `index.html`, the home page of application
 
 
-	POST
-		Stores incomming data to sqlite storage. Expects geoocordinate as JSON.
+   method: POST
+   Stores incomming data to sqlite storage. Expects geoocordinate as JSON.
 
 
-`/fetch`
+* /fetch
 
-	GET:
-		returns a table of sqlite database.
+   method: GET
+   returns a table of sqlite database.
 
-`/clear`
+* /clear
 	 
-	 GET:
-	 	clears all the backend sqlite data
+   method: GET
+   clears all the backend sqlite data
 
 
 ## FOOTNOTES
