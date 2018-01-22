@@ -78,6 +78,9 @@ Looks somewhat like this, JSON data storage
 
 
 #### main.js
+
+PART-1: VALIDATE AND PUSH ADDRESS TO DATABASES
+
 ```
 var ref = firebase.database().ref('...');
 
@@ -86,6 +89,8 @@ var ref = firebase.database().ref('...');
 
 function myMap(){
 	...
+
+	// Callback function to google maps api
 
 	var mapOptions = {
 
@@ -98,30 +103,103 @@ function myMap(){
 
 	var geocoder = new google.maps.Geocoder();
 
-	// for reverse geocoding, 
-	// returns address content 
-
+	// Arguments: map                   ,  Type: google.maps.Map instance 
+	// Returns: Entire firebase database,  Type: array of JSON objects
 	google.maps.event.addListener(map, 'click', function(event) {
 
 		...
 
-		// On click listener
-
 		
+		// On click listener, returns geocode
+
+
+		// Arguments: Geo-coordinates, callback
+		// Returns: Precise real address
+		geocoder.geocode({
+
+				latitude/longitude
+
+				// coordinates
+
+			}, func(){
+
+				//1. Validates data
+
+				google.maps.GeocoderStatus.OK && results[0] && location_type == 'ROOFTOP'
+
+
+				//2. Set markers
+
+
+				//3. Push data to firabse database
+				ref.push(..)
+
+				//4. Push data to sqlite flask backend
+				$.ajax({
+					..
+					})
+
+				});
+
+				...
+
 	}
 
 
 }
 
-// Callback function to google maps api
-
-
-
 ```
 
 
+PART-2: RETERIVE DATA
+
+```
+// Arguments: ..
+// Returns: Entire firebase database,  Type: array of JSON objects
+ref.on(.. , func{
+
+	...
+
+	// Triggered on changes on firebase database
 
 
+	// Reset marker
+
+
+	});
+```
+
+
+PART-3: HELPING FUNCTION
+
+```
+// Arguments: None
+// Returns: None
+function clearMarker(){
+	...
+
+	// clears gloabal marker array
+}
+
+
+// Arguments: None
+// Return: None
+function resetData(){
+	..
+
+	//1.  Delete firebase database
+	ref.remove();
+
+	//2. Delete sqlite backend database
+	$.ajax({
+			...
+
+			// sends get request on clear handler
+		});
+
+
+}
+```
 
 
 
