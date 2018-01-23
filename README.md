@@ -2,11 +2,12 @@
 
 NOTE: 
    Don't worry about failing build
+
    Some issue with local db connection at travis. Looking into that!
+   
    Local tests are passing.
 
  
-
 
 # Welcome to revamped Schrodinger's Map
 
@@ -21,16 +22,16 @@ issued. If bored you can reset all the data and start again.
 
 ## Functionality in a nutshell
 
-1. *(MAP TRIGGER)* Map click will generate geocoordinate
+1. **(MAP TRIGGER)** Map click will generate geocoordinate
 
-2. *(MAP LISTENER)* A maps listener will reverse geocode and validate data
+2. **(MAP LISTENER)** A maps listener will reverse geocode and validate data
 
-3. *(PUSH)* The valid address you clicked will be pushed to firebase realtime database and a sqlite3 database on flask backend.
-4. *(DELETE)* Reset will clear data on both the databases separately 
+3. **(PUSH)** The valid address you clicked will be pushed to firebase realtime database and a sqlite3 database on flask backend.
+4. **(DELETE)** Reset will clear data on both the databases separately 
 
-5. *(DECOUPLED)* Firebase and sqlite are NOT synced (Tried that!, wouldn't that be cool?)
+5. **(DECOUPLED)** Firebase and sqlite are NOT synced (Tried that!, wouldn't that be cool?)
 
-6. *(FIREBASE LISTENER)* Any data pushed into firebase will trigger firebase listener, receives wholedataset and lay markers accordingly.
+6. **(FIREBASE LISTENER)** Any data pushed into firebase will trigger firebase listener, receives wholedataset and lay markers accordingly.
 
 
 
@@ -45,13 +46,12 @@ issued. If bored you can reset all the data and start again.
 
 ### LOCAL DEVELOPMENT ENVIORNMENT
 
-Ensure you are on Python 2.7.10
+Ensure you are on Python 2.7.10 (Not sure about other 2.xx versions, give it a try)
 
 #### setup virtual env
 ```
 $ virtualenv dev
 $ source dev/bin/activate
-
 ```
 
 #### clone project
