@@ -5,6 +5,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ABSOLUTE_PATH = os.path.join(BASE_DIR, 'app/maps/database/')
 
 
+
 class Config(object):
     """
     Common configurations
@@ -26,7 +27,8 @@ class ProductionConfig(Config):
     """
     Production configurations
     """
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URI']
 
     DEBUG = False
 
