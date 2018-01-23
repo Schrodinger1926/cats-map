@@ -56,7 +56,6 @@ $ cd cats-map
 #### install dependencies and set paths
 ```
 $ pip install -r requirements.txt
-$ export PYTHONPATH=$(pwd)
 $ export FLASK_APP=run.py
 $ export FLASK_CONFIG=development
 $ export PRODUCTION_DATABASE_URI='None'
@@ -73,7 +72,7 @@ $ export PRODUCTION_DATABASE_URI='None'
 $ flask db init
 $ flask db migrate
 $ flask db upgrade
-
+$ flask run
 ```
 
 ### HEROKU DEPLOYMENT
@@ -92,8 +91,8 @@ $ flask db upgrade
 
 * added env Config Vars key,val pairs on app setting. (could be done from CLI as well)
    ```
-   FLASK_APP run.py
-   FLASK_CONFIG production
+   FLASK_APP = run.py
+   FLASK_CONFIG = production
    PRODUCTION_DATABASE_URI = .... your postgresql://username:password@host/path ....
    ```
 

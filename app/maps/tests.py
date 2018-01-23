@@ -57,14 +57,14 @@ class TestModels(TestBase):
 		Test lat type
 		"""
 		loc = Location.query.first()
-		self.assertEqual(type(loc.lng), float)
+		self.assertEqual(type(loc.lng), db.Float)
 
-	# def test_address_type(self):
-	# 	"""
-	# 	Test lat type
-	# 	"""
-	# 	loc = Location.query.first()
-	# 	self.assertEqual(type(loc.address), str)
+	def test_address_type(self):
+		"""
+		Test lat type
+		"""
+		loc = Location.query.first()
+		self.assertEqual(type(loc.address), db.String)
 
 	def test_address_length_sanity(self):
 		"""
