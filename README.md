@@ -1,12 +1,5 @@
 [![Build Status](https://travis-ci.org/Schrodinger1926/cats-map.svg?branch=master)](https://travis-ci.org/Schrodinger1926/cats-map) ![Heroku](https://heroku-badge.herokuapp.com/?app=cats-map)
 
-NOTE: 
-   Don't worry about failing build
-
-   Some issue with local db connection at travis. Looking into that!
-
-   Local tests are passing.
-
 live @ https://cats-map.herokuapp.com/ 
 
 # Welcome to revamped Schrodinger's Map
