@@ -100,7 +100,8 @@ $ flask db upgrade
 * added env Config Vars key,val pairs on app setting. (could be done from CLI as well)
    ```
    FLASK_APP run.py
-   FLASK_CONFIG development
+   FLASK_CONFIG production
+   PRODUCTION_DATABASE_URI = .... your postgresql://username:password@host/path ....
    ```
 
 * Using heroku-postgresql as production database
