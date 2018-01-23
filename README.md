@@ -264,7 +264,7 @@ function resetData(){
 
 ![Alt text](/assets/backend.png?raw=true)
 
-#### MODEL
+#### DATA MODEL
 
 A simple three data attribute model
 
@@ -323,7 +323,7 @@ A simple three data attribute model
    Db compatibility issues
 
    THE typo bug on which I spent a great deal of time
-   
+
 * Spent a hell lot time with concepts, bugs and architecture.
 * From almost no experience in javascript, maps API, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
 * I struggled a lot with the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
