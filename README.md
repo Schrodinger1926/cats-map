@@ -66,6 +66,7 @@ $ pip install -r requirements.txt
 $ export PYTHONPATH=$(pwd)
 $ export FLASK_APP=run.py
 $ export FLASK_CONFIG=development
+$ export PRODUCTION_DATABASE_URI='None'
 ```
 
 

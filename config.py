@@ -28,7 +28,7 @@ class ProductionConfig(Config):
     Production configurations
     """
 
-    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URI']
+    SQLALCHEMY_DATABASE_URI = os.environ['PRODUCTION_DATABASE_URI']
 
     DEBUG = False
 
