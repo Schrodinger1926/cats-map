@@ -4,7 +4,7 @@ NOTE:
    Don't worry about failing build
 
    Some issue with local db connection at travis. Looking into that!
-   
+
    Local tests are passing.
 
  
@@ -82,7 +82,7 @@ $ flask db upgrade
 
 ```
 
-#### HEROKU DEPLOYMENT
+### HEROKU DEPLOYMENT
 
 * Deployments are done directly from this git repository. 
 
@@ -291,29 +291,42 @@ A simple three data attribute model
 * /
 
    method : GET
+
    returns `index.html`, the home page of application
 
 
+
    method: POST
+
    Stores incomming data to sqlite storage. Expects geoocordinate as JSON.
 
 
 * /fetch
 
    method: GET
+
    returns a table of sqlite database.
 
 * /clear
 	 
    method: GET
+
    clears all the backend sqlite data
 
 
 ## FOOTNOTES
+* Release day was crazy.
+   City power outage
 
+   Laptop charge broken
+
+   Db compatibility issues
+
+   THE typo bug on which I spent a great deal of time
+   
 * Spent a hell lot time with concepts, bugs and architecture.
-* From almost no experience in javascript, maps, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
-* I struggled a lot witht the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
+* From almost no experience in javascript, maps API, ajax, ORM, Flask, firebase, tests and more to an intermediate level in 4 days. 
+* I struggled a lot with the architecture, bascially the whole flask app now looks like kind of Django. Why Django is needed? I think I understood it the hard and a permament way.
 
 * Won't say a J learning curve, it wasn't an exponential in the later stage. It was a vertical.
 
