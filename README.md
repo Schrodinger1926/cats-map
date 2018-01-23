@@ -7,7 +7,7 @@ NOTE:
 
    Local tests are passing.
 
- 
+live @ https://cats-map.herokuapp.com/ 
 
 # Welcome to revamped Schrodinger's Map
 
