@@ -1,7 +1,9 @@
 [![Build Status](https://travis-ci.org/Schrodinger1926/cats-map.svg?branch=master)](https://travis-ci.org/Schrodinger1926/cats-map) ![Heroku](https://heroku-badge.herokuapp.com/?app=cats-map)
 
-NOTE: Don't worry about failing build\n
-	  Some issue with local db connection at travis. Looking into that!\n
+NOTE: Don't worry about failing build
+
+	  Some issue with local db connection at travis. Looking into that!
+
 	  Local tests are passing.
 
  
@@ -20,16 +22,16 @@ issued. If bored you can reset all the data and start again.
 
 ## Functionality in a nutshell
 
-1. (MAP TRIGGER) Map click will generate geocoordinate
+1. *(MAP TRIGGER)* Map click will generate geocoordinate
 
-2. (MAP LISTENER) A maps listener will reverse geocode and validate data
+2. *(MAP LISTENER)* A maps listener will reverse geocode and validate data
 
-3. (PUSH)The valid address you clicked will be pushed to firebase realtime database and a sqlite3 database on flask backend.
-4. (DELETE) Reset will clear data on both the databases separately 
+3. *(PUSH)* The valid address you clicked will be pushed to firebase realtime database and a sqlite3 database on flask backend.
+4. *(DELETE)* Reset will clear data on both the databases separately 
 
-5. (DECOUPLED) Firebase and sqlite are NOT synced (Tried that!, wouldn't that be cool?)
+5. *(DECOUPLED)* Firebase and sqlite are NOT synced (Tried that!, wouldn't that be cool?)
 
-6. (FIREBASE LISTENER) Any data pushed into firebase will trigger firebase listener, receives wholedataset and lay markers accordingly.
+6. *(FIREBASE LISTENER)* Any data pushed into firebase will trigger firebase listener, receives wholedataset and lay markers accordingly.
 
 
 
@@ -81,11 +83,29 @@ $ flask db upgrade
 
 ```
 
-#### HEROKU CLI DEPLOYMENT
+#### HEROKU DEPLOYMENT
 
-In progress.
-NOTE: Need higher version of xcode to install Heroku CLI, heavy downloading ongoing!.
+* Deployments are done directly from this git repository. 
 
+* Procfile
+   ```
+   web: flask run --host 0.0.0.0 --port ${PORT}
+   init: flask db init
+   migrate: flask db migrate
+   upgrade: flask db upgrade
+   ```
+* runtime.txt
+   `python-2.7.10`
+
+* added env Config Vars key,val pairs on app setting. (could be done from CLI as well)
+   ```
+   FLASK_APP run.py
+   FLASK_CONFIG development
+   ```
+
+* Using heroku-postgresql as production database
+
+* Manual deployement trigger,
 
 
 # Documentation
