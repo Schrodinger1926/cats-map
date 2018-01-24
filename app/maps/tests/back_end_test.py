@@ -8,7 +8,9 @@ from app.models import Location
 
 
 class TestBase(TestCase):
-	"""This is base handler for rest of the test cases """
+	"""docstring for TestBase"""
+	# SQLALCHEMY_DATABASE_URI = "sqlite://"
+	# TESTING = True
 	def create_app(self):
 
 		config_name = 'testing'
