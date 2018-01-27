@@ -39,15 +39,6 @@ class TestBase(LiveServerTestCase):
 		response = urllib2.urlopen(self.get_server_url())
 		self.assertEqual(response.code, 200)
 
-class ClassName(TestBase):
-	"""Testing map click events"""
-	def test_valid_map_clicks(self):
-		"""
-		clicks on maps element at specific coordinates, use screen offset for that.
-		Verify if database get incremented
-		"""
-		pass
-
 
 if __name__ == '__main__':
 	unittest.run()
