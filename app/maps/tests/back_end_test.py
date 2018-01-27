@@ -1,7 +1,7 @@
 import os
 import unittest
 from flask_testing import TestCase
-from flask import url_for, abort
+from flask import url_for
 
 from app import create_app, db
 from app.models import Location
