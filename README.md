@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/Schrodinger1926/cats-map.svg?branch=master)](https://travis-ci.org/Schrodinger1926/cats-map) ![Heroku](https://heroku-badge.herokuapp.com/?app=cats-map)
 
-live @ https://cats-map.herokuapp.com/ 
+live @ https://cats-map.herokuapp.com/
+
+NOTE: FIREBASE DATABASE WRITE ACCESS IS CLOSED NOW, CAN BE OPENED ON REQUEST.
 
 # Welcome to revamped Schrodinger's Map
 
